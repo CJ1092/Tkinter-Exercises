@@ -42,17 +42,17 @@ Label(root, text="Enter another number").grid(row=2, column=0)
 labelResult = Label(root)
 labelResult.grid(row=7, column=2)
 
-entryNum1 = Entry(root, textvariable=number1).grid(row=1, column=2)
-entryNum2 = Entry(root, textvariable=number2).grid(row=2, column=2)
+Entry(root, textvariable=number1).grid(row=1, column=2)
+Entry(root, textvariable=number2).grid(row=2, column=2)
 
 addition = partial(addition, labelResult, number1, number2)
 subtraction = partial(subtraction, labelResult, number1, number2)
 multiplication = partial(multiplication, labelResult, number1, number2)
 division = partial(division, labelResult, number1, number2)
 
-buttonCal1 = Button(root, text="Add", command=addition).grid(row=3, column=0)
-buttonCal2 = Button(root, text="Subtract", command=subtraction).grid(row=3, column=1)
-buttonCal3 = Button(root, text="Multiply", command=multiplication).grid(row=3, column=2)
-buttonCal4 = Button(root, text="Divide", command=division).grid(row=3, column=3)
+Button(root, text="Add", command=addition).grid(row=3, column=0)
+Button(root, text="Subtract", command=subtraction).grid(row=3, column=1)
+Button(root, text="Multiply", command=multiplication).grid(row=3, column=2)
+Button(root, text="Divide", command=division).grid(row=3, column=3)
 
 root.mainloop()
